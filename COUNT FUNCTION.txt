@@ -1,0 +1,15 @@
+       
+  select* from dlithe.dbo.S_HREMPLOYEES
+  select count(*) from dlithe.dbo.S_HREMPLOYEES
+  
+  select sum(salary) from dlithe.dbo.S_HREMPLOYEES
+  
+  select avg (salary) from dlithe.dbo.S_HREMPLOYEES  
+  
+  select max(salary),min(salary) from dlithe.dbo.S_HREMPLOYEES sh
+  
+  select count(1),DEPARTMENT_ID from dlithe.dbo.S_HREMPLOYEES sh
+  where DEPARTMENT_ID is not null 
+  Group by DEPARTMENT_ID 
+  having count(1)>1
+  order by DEPARTMENT_ID desc;
